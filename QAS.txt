@@ -1,0 +1,8 @@
+1,eclipse debug mode drop to frame can't work,it warns obsolete methods on the stack.Can't step back
+after change the code.????
+2,svn can't change user,though I have removed the auth dir,new user and passwrok still can't work.
+  answer:in my local PC I can use my svn account, so I copy the auth dir of local to my remote PC,
+  and it wroks fine.
+3,can't find dynamic element in IE
+	try to find element by xpath,and we should code like this .//*[@id='mm']/div[1]/div[2]/div[3]/div[1]/div[1]/div[1]
+	but not .//*[@id='mm']/div/div[2]/div[3]/div/div/div

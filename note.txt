@@ -1,0 +1,134 @@
+
+
+Browser Plugins:
+	firefox:
+	  	selenium-builder-latest-sauce.xpi
+	  	selenium-ide-2.5.0.xpi
+	  	FireBug
+	  	FirePath
+	  	FireQuery
+	  	Tiny Javascript Debugger
+ 
+eclipse plugins:
+	 jad
+	 jetty(blue)
+	 maven
+	 svn
+	 git
+	 testNG
+	 EclEmma
+	 markdown
+	 json
+	
+	
+Thread safe
+	Thread not safe method:
+			 public class MyCount {
+		  private static int counter = 0;
+		 
+		  public static int getCount(){
+		    return counter++;
+		  }
+		}
+	Thread safe method:
+		public class MyCount {
+			private static int counter = 0;
+			 
+			public static synchronized int getCount(){
+				return counter++;
+			}
+		}
+	note:if the method is static,synchronized locked the class but not the method it self.
+		if the method is not static ,synchronized locked the method it self.
+	Thread safe method use JDK:
+		public class MyCount {
+			private static AtomicInteger counter = new AtomicInteger(0);
+			 
+			public static int getCount(){
+				return counter.getAndIncrement();
+			}
+		}
+		
+		
+Chrome Console:
+	1,console.log
+		console.log('一颗红心向太阳','吼吼~');
+		console.info('楼上药不能停！');
+		console.warn('楼上嘴太贱！');
+		console.error('楼上关你毛事？');
+	2,console.group
+		console.group("app.foo");
+		console.log("来自foo模块的信息 blah blah blah...");
+		console.groupEnd();
+		console.group("app.bar");
+		console.log("来自bar模块的信息 blah blah blah...");
+		console.groupEnd();
+	3,console.log('%chello world','font-size:25px;color:red;');
+	4,console.log('%chello world', 'background-image:-webkit-gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );color:transparent;-webkit-background-clip: text;font-size:5em;');
+	5,console.log("%c", "padding:50px 300px;line-height:120px;background:url('http://wayou.github.io/2014/09/10/chrome-console-tips-and-tricks/rabbit.gif') no-repeat;");
+	6,console.table
+		var data = [{'品名': '杜雷斯', '数量': 4}, {'品名': '冈本', '数量': 3}];
+		console.table(data);
+	7,console.log('%c你好','color:red;','小明','你知道小红被妈妈打了么');
+	8,var isDebug=false;
+	  console.assert(isDebug,'开发中的log信息。。。');
+	9,console.count
+		function foo(){
+			//其他函数逻辑blah blah。。。
+			console.count('foo 被执行的次数：');
+		}
+		foo();
+		foo();
+		foo();
+	10,console.dir(document.body);
+		console.log(document.body);
+	11,	console.time("Array initialize");
+		var array= new Array(1000000);
+		for (var i = array.length - 1; i >= 0; i--) {
+			array[i] = new Object();
+		};
+		console.timeEnd("Array initialize");
+		
+		====================================================
+		var start=new Date().getTime();
+		var array= new Array(1000000);
+		for (var i = array.length - 1; i >= 0; i--) {
+			array[i] = new Object();
+		};
+		console.log(new Date().getTime()-start);
+	12,console.trace
+	13,2+2//回车，再
+		$_+1//回车得5
+	14,$0-$4代表了最近5个你选择过的DOM节点
+	15,$$('div')
+	16,var tboy={name:'wayou',gender:'unknown',hobby:'opposite to the gender'};
+		keys(tboy);	//return all keys
+		values(tboy);//return all values
+	17,	function sayHello(name){
+			alert('hello,'+name);
+		}
+		monitor(sayHello);
+		sayHello('wayou');
+		unmonitor(sayHello);
+		sayHello('wayou');
+	18,debug&undebug same as monitor
+	19,console.clear();
+	20,var list = document.querySelector("#gc-container");console.dirxml();
+	21,
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
